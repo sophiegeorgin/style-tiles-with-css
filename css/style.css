@@ -14,17 +14,33 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
+  --bg-color: rgb(165, 255, 214);
   --link-color: green;
   --link-hover-color: blue;
   --color-4: hotpink;
   --color-5: rebeccapurple;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
+  --primary-font: gopher, sans-serif;
+  --secondary-font: montserrat, sans-serif;
   --main-text-color: #000;
 
   --white-space: 1rem;
+}
+
+@font-face {
+  font-family: gopher, sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: montserrat, sans-serif;
+
+  font-weight: 300;
+
+  font-style: normal;
 }
 
 button {
@@ -34,8 +50,7 @@ a {
   transition: all 3s;
 }
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  transform: scale(1.2);
 }
 
 button:active {
@@ -126,23 +141,23 @@ ul li:last-child {
 }
 
 .color-swatch-1 {
-  background-color: var(--bg-color);
+  background-color: #fff2f2;
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+  background-color: #a9dbf5;
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: #f0ebab;
 }
 
 .color-swatch-4 {
-  background-color: var(--color-4);
+  background-color: #636262;
 }
 
 .color-swatch-5 {
-  background-color: var(--color-5);
+  background-color: #a5ffd6;
 }
 
 .textures li {
@@ -152,19 +167,20 @@ ul li:last-child {
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(https://storage.googleapis.com/webdesignledger.pub.network/LaT/edd/2016/02/colorful-motion-blur-light-texture-3-1024x768.jpg)
+    top left repeat;
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
+  background: url(../img/blur.jpg) top left repeat;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/grid.jpg) top left repeat;
 }
 
 .texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+  background: url(../img/noise.jpg) top left repeat;
 }
 
 .images ul {
@@ -180,29 +196,22 @@ ul li:last-child {
 
 button {
   padding: 1rem;
+  border: black solid 2px;
   border-radius: 4px;
-  background: var(--link-color);
+  background: white;
   text-align: center;
   text-decoration: none;
   font: bold 1.25em/1 var(--primary-font);
   letter-spacing: 1px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
-  transition: all 0.2s ease;
+
   cursor: pointer;
   margin: 0 1rem 1rem 0;
 }
 
 .secondary-button {
-  background: var(--color-5);
-}
-
-button:focus,
-button:active,
-button:focus-within {
-  outline: 0;
-  border-radius: 4px;
+  background: #a9dbf5;
 }
 
 .typography-main {
@@ -212,16 +221,17 @@ button:focus-within {
 .h1-sample {
   font-size: 2.4rem;
   font-weight: bold;
+  font-family: gopher, sans-serif;
 }
 
 .h2-sample {
-  font-family: var(--secondary-font);
+  font-family: montserrat, sans-serif;
   font-style: italic;
   font-size: 1.25rem;
 }
 
 p.typography-sample {
-  font-family: var(--secondary-font);
+  font-family: montserrat, sans-serif;
   line-height: 1.5;
   max-width: 960px;
 }
@@ -235,7 +245,7 @@ em {
 }
 
 a {
-  font-family: var(--primary-font);
+  font-family: gopher, sans-serif;
   color: var(--link-color);
   font-weight: bold;
   text-decoration: none;
